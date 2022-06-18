@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address_two');
             $table->string('job');
             $table->integer('phone_number');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->string('roles')->default('USER');
 
             $table->softDeletes();

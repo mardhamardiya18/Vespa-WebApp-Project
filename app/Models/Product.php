@@ -26,4 +26,9 @@ class Product extends Model
     {
         return $this->hasOne(Specification::class, 'id', 'products_id');
     }
+
+    public function testimoni()
+    {
+        return $this->belongsTo(Testimonial::class, 'products_id', 'id');
+    }
 }
