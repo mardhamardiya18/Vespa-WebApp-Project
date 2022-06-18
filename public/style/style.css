@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+
+:root{
+    --first-color : #6DCCB0;
+    --second-color : #40B4E5;
+    --black-color : #1b1d1d;
+    --font: 'Rubik', sans-serif;
+
+}
+
+*{
+    list-style: none;
+    text-decoration: none !important;
+}
+
+body{
+    font-family: var(--font);
+}
+
+.navbar .company{
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--black-color);
+    letter-spacing: 0.2em;
+}
+
+.menu .menu-link{
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--black-color);
+}
+
+.menu .menu-link.active{
+    font-weight: 700;
+    color: var(--first-color);
+}
+
+.menu .toggle-sidebar{
+    color: var(--first-color);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+
+.offcanvas .list-group-item.active{
+    background-color: #6DCCB0 !important;
+    border-color: #6DCCB0 !important;
+}
