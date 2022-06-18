@@ -3,7 +3,11 @@
         <a class="navbar-brand" href="#">
             <img src="/images/logo.png" alt="">
         </a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+            aria-controls="offcanvasWithBothOptions">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto">
                 <a class="company" href="#">VESPA INDONESIA</a>
             </div>
@@ -11,16 +15,17 @@
     </div>
 </nav>
 
-{{-- Nav Menu --}}
-<div class="container menu mt-4 sticky-top">
+{{-- Nav Menu Desktop --}}
+<div class="container menu mt-4 sticky-top d-none d-lg-block">
     <div class="row align-items-center">
-        <div class="col-2 text-end">
+        <div class="col-2 text-end d-none d-lg-block">
             <i class='bx bxs-grid-alt bx-md toggle-sidebar' type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasSidebar" aria-controls="offcanvasWithBothOptions"></i>
         </div>
         <div class="col-10 text-center">
             <div class="menu-wrapper">
-                <a class="menu-link active" href="#">Profile</a>
+                <a class="menu-link active" href="#">Home</a>
+                <a class="menu-link" href="#">Profile</a>
                 <a class="menu-link" href="#">Visi dan Misi</a>
                 <a class="menu-link" href="#">Produk Kami</a>
                 <a class="menu-link">Kontak</a>
@@ -28,9 +33,31 @@
             </div>
         </div>
     </div>
-
 </div>
 
+{{-- Nav Menu Mobile --}}
+<div class="container sticky-top mt-3 menu-mobile">
+    <a class="btn btn-primary d-block btn-menu d-lg-none" data-bs-toggle="collapse" href="#collapseExample"
+        role="button" aria-expanded="false" aria-controls="collapseExample">
+        Menu
+    </a>
+    <div class="collapse mt-3" id="collapseExample">
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+                Home
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">Profile</a>
+            <a href="#" class="list-group-item list-group-item-action">Visi dan Misi</a>
+            <a href="#" class="list-group-item list-group-item-action">Produk Kami</a>
+            <a class="list-group-item list-group-item-action">Kontak</a>
+            <a class="list-group-item list-group-item-action">About Us</a>
+        </div>
+    </div>
+</div>
+
+
+{{-- Sidebar Menu --}}
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasSidebar"
     aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">

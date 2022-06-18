@@ -17,16 +17,25 @@ body{
     font-family: var(--font);
 }
 
+.navbar{
+    background-color: #6DCCB0 !important;
+}
+
+.navbar .navbar-brand img{
+    width: 140px;
+    
+}
+
 .navbar .company{
     font-size: 35px;
     font-weight: 700;
-    color: var(--black-color);
+    color: #fff;
     letter-spacing: 0.2em;
 }
 
 .menu .menu-link{
-    margin: 0 20px;
-    font-size: 20px;
+    margin: 0 30px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--black-color);
 }
@@ -46,4 +55,15 @@ body{
 .offcanvas .list-group-item.active{
     background-color: #6DCCB0 !important;
     border-color: #6DCCB0 !important;
+}
+
+.menu-mobile .btn-menu{
+    background-color: #6DCCB0 !important;
+    border-color: #6DCCB0 !important;
+}
+
+
+/* HEADER CSS */
+.header{
+    margin-top: 50px;
 }
