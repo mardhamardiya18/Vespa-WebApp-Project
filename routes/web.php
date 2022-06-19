@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('pages.profile');
 })->name('profile');
+
+Route::get('/visi-misi', function () {
+    return view('pages.visimisi');
+})->name('visimisi');
+
+Route::get('/product', function () {
+    return view('pages.product');
+})->name('product');

@@ -20,7 +20,7 @@
     <div class="row align-items-center">
         <div class="col-2 text-end d-none d-lg-block">
             <i class='bx bxs-grid-alt bx-md toggle-sidebar' type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasMenu" aria-controls="offcanvasWithBothOptions"></i>
+                data-bs-target="#offcanvasSideBar" aria-controls="offcanvasWithBothOptions"></i>
         </div>
         <div class="col-10 text-center">
             <div class="menu-wrapper">
@@ -28,8 +28,10 @@
                     href="{{ route('homepage') }}">Home</a>
                 <a class="menu-link {{ request()->is('profile') ? 'active' : '' }}"
                     href="{{ route('profile') }}">Profile</a>
-                <a class="menu-link" href="#">Visi dan Misi</a>
-                <a class="menu-link" href="#">Produk Kami</a>
+                <a class="menu-link {{ request()->is('visi-misi') ? 'active' : '' }}"
+                    href="{{ route('visimisi') }}">Visi dan Misi</a>
+                <a class="menu-link {{ request()->is('product') ? 'active' : '' }}"
+                    href="{{ route('product') }}">Produk Kami</a>
                 <a class="menu-link" href="#">Kontak</a>
                 <a class="menu-link" href="#">About Us</a>
             </div>
@@ -52,8 +54,12 @@
             </a>
             <a href="{{ route('profile') }}"
                 class="list-group-item list-group-item-action {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
-            <a href="#" class="list-group-item list-group-item-action">Visi dan Misi</a>
-            <a href="#" class="list-group-item list-group-item-action">Produk Kami</a>
+            <a href="{{ route('visimisi') }}"
+                class="list-group-item list-group-item-action {{ request()->is('visi-misi') ? 'active' : '' }}">Visi
+                dan Misi</a>
+            <a href="{{ route('product') }}"
+                class="list-group-item list-group-item-action {{ request()->is('product') ? 'active' : '' }}">Produk
+                Kami</a>
             <a class="list-group-item list-group-item-action">Kontak</a>
             <a class="list-group-item list-group-item-action">About Us</a>
         </div>
