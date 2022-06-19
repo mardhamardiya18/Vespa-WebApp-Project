@@ -124,7 +124,8 @@ footer .row-copy i{
 
 
 
-.profile .title-section h1{
+.profile .title-section h1, .visimisi .title-section h1,
+.product .title-section h1, .contact .title-section h1, .about .title-section h1{
  font-size: 30px;
  font-weight: 700;
 }
@@ -144,6 +145,13 @@ footer .row-copy i{
 
 /* PRODUCT PAGE CSS */
 .product .row-product .btn-product{
+    background-color: #6DCCB0;
+    color: #fff;
+}
+
+
+/* CONTACT PAGE CSS */
+.contact .btn-contact{
     background-color: #6DCCB0;
     color: #fff;
 }

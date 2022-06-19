@@ -32,7 +32,8 @@
                     href="{{ route('visimisi') }}">Visi dan Misi</a>
                 <a class="menu-link {{ request()->is('product') ? 'active' : '' }}"
                     href="{{ route('product') }}">Produk Kami</a>
-                <a class="menu-link" href="#">Kontak</a>
+                <a class="menu-link {{ request()->is('contact') ? 'active' : '' }}"
+                    href="{{ route('contact') }}">Kontak</a>
                 <a class="menu-link" href="#">About Us</a>
             </div>
         </div>
@@ -60,7 +61,8 @@
             <a href="{{ route('product') }}"
                 class="list-group-item list-group-item-action {{ request()->is('product') ? 'active' : '' }}">Produk
                 Kami</a>
-            <a class="list-group-item list-group-item-action">Kontak</a>
+            <a href="{{ route('product') }}"
+                class="list-group-item list-group-item-action {{ request()->is('contact') ? 'active' : '' }}">Kontak</a>
             <a class="list-group-item list-group-item-action">About Us</a>
         </div>
     </div>

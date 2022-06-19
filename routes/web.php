@@ -28,3 +28,7 @@ Route::get('/visi-misi', function () {
 Route::get('/product', function () {
     return view('pages.product');
 })->name('product');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
