@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('homepage') }}">
             <img src="/images/logo.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
@@ -9,14 +9,14 @@
         </button>
         <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto">
-                <a class="company" href="#">VESPA INDONESIA</a>
+                <a class="company" href="#">PT PIAGGIO INDONESIA</a>
             </div>
         </div>
     </div>
 </nav>
 
 {{-- Nav Menu Desktop --}}
-<div class="container menu mt-4 sticky-top d-none d-lg-block">
+<div class="container menu mt-4 sticky-top d-none d-lg-block bg-light shadow-sm">
     <div class="row align-items-center">
         <div class="col-2 text-end d-none d-lg-block">
             <i class='bx bxs-grid-alt bx-md toggle-sidebar' type="button" data-bs-toggle="offcanvas"
@@ -24,12 +24,14 @@
         </div>
         <div class="col-10 text-center">
             <div class="menu-wrapper">
-                <a class="menu-link active" href="#">Home</a>
-                <a class="menu-link" href="#">Profile</a>
+                <a class="menu-link {{ request()->is('/') ? 'active' : '' }}"
+                    href="{{ route('homepage') }}">Home</a>
+                <a class="menu-link {{ request()->is('profile') ? 'active' : '' }}"
+                    href="{{ route('profile') }}">Profile</a>
                 <a class="menu-link" href="#">Visi dan Misi</a>
                 <a class="menu-link" href="#">Produk Kami</a>
-                <a class="menu-link">Kontak</a>
-                <a class="menu-link">About Us</a>
+                <a class="menu-link" href="#">Kontak</a>
+                <a class="menu-link" href="#">About Us</a>
             </div>
         </div>
     </div>
@@ -44,10 +46,10 @@
     <div class="collapse mt-3" id="collapseExample">
 
         <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="{{ route('homepage') }}" class="list-group-item list-group-item-action">
                 Home
             </a>
-            <a href="#" class="list-group-item list-group-item-action">Profile</a>
+            <a href="{{ route('profile') }}" class="list-group-item list-group-item-action">Profile</a>
             <a href="#" class="list-group-item list-group-item-action">Visi dan Misi</a>
             <a href="#" class="list-group-item list-group-item-action">Produk Kami</a>
             <a class="list-group-item list-group-item-action">Kontak</a>

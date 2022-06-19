@@ -63,7 +63,63 @@ body{
 }
 
 
-/* HEADER CSS */
+/* HOMEPAGE CSS */
 .header{
     margin-top: 50px;
+}
+
+.product{
+    margin-top: 150px;
+}
+
+.product .card{
+    box-shadow: 0px 1px 40px rgba(0, 0, 0, 0.069);
+}
+
+.product .btn-CTA{
+    background-color: #6DCCB0 !important;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer{
+    margin-top: 150px;
+}
+
+footer .title-info{
+    color: #6DCCB0;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+footer li a{
+    color: var(--black-color);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+footer .row-copy i{
+    font-size: 40px;
+    color: #6DCCB0;
+}
+
+@media screen and (max-width: 500px) {
+    .product{
+        margin-top: 100px;
+    }
+    .product .card .card-title{
+        font-size: 16px;
+    }
+}
+
+
+
+/* PROFILE PAGE CSS */
+
+
+
+.profile .title-section h1{
+ font-size: 30px;
+ font-weight: 700;
 }
