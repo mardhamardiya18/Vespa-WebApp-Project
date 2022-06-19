@@ -29,7 +29,7 @@
                 <div class="col-12 mb-4">
                     <h2>Pencapaian Terbaru</h2>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="card">
                         <img src="/images/pencapaian1.jpg" class="img-fluid" alt="">
                         <div class="card-body">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="card">
                         <img src="/images/pencapaian2.jpg" class="img-fluid" alt="">
                         <div class="card-body">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="card">
                         <img src="/images/pencapaian3.jpg" class="img-fluid" alt="">
                         <div class="card-body">
@@ -56,12 +56,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
                     <div class="card">
                         <img src="/images/pencapaian4.jpg" class="img-fluid" alt="">
                         <div class="card-body">
                             <h5 class="card-title">PT PIAGGIO INDONESIA MERAYAKAN HARI JADINYA YANG KE 10 DI INDONESIA</h5>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-bestservices mt-5">
+                <div class="col-12 mb-4">
+                    <h2>Our Best Services</h2>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card text-center p-4">
+                        <h4 class=" fw-bold">01. TEST DRIVE</h4>
+                        <p class="text-start">Kami memberikan pelayanan untuk melakukan test drive pada produk kami, dengan
+                            tujuan untuk
+                            menciptakan pengalaman nyata bersama kami</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3 mt-sm-0">
+                    <div class="card text-center p-4">
+                        <h4 class=" fw-bold">02. MOTOPLEX VESPA</h4>
+                        <p class="text-start">Untuk menjamin keamanan dan kenyamanan terbaik dalam berkendara, percayakan
+                            selalu perawatan kendaraan Anda hanya di Bengkel Resmi Motoplex Vespa.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                    <div class="card text-center p-4">
+                        <h4 class=" fw-bold">03. Dealer</h4>
+                        <p class="text-start">Kami sudah hadir di 47 tempat di seluruh Indonesia</p>
                     </div>
                 </div>
             </div>

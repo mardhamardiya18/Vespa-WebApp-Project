@@ -62,6 +62,10 @@ body{
     border-color: #6DCCB0 !important;
 }
 
+.menu-mobile .list-group-item.active{
+    background-color: #6DCCB0 !important;
+}
+
 
 /* HOMEPAGE CSS */
 .header{
@@ -123,3 +127,16 @@ footer .row-copy i{
  font-size: 30px;
  font-weight: 700;
 }
+
+.profile .row-pencapaian .card{
+    border: none;
+    box-shadow: 0px 1px 40px rgba(0, 0, 0, 0.069);
+}
+
+.profile .row-bestservices .card{
+    border: none;
+    box-shadow: 0px 1px 40px rgba(0, 0, 0, 0.069);
+    background-color: #6DCCB0;
+    color: #fff;
+}
+

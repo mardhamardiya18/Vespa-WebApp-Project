@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="{{ route('homepage') }}">
             <img src="/images/logo.png" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSideBar"
             aria-controls="offcanvasWithBothOptions">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
     <div class="row align-items-center">
         <div class="col-2 text-end d-none d-lg-block">
             <i class='bx bxs-grid-alt bx-md toggle-sidebar' type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasSidebar" aria-controls="offcanvasWithBothOptions"></i>
+                data-bs-target="#offcanvasMenu" aria-controls="offcanvasWithBothOptions"></i>
         </div>
         <div class="col-10 text-center">
             <div class="menu-wrapper">
@@ -43,13 +43,15 @@
         role="button" aria-expanded="false" aria-controls="collapseExample">
         Menu
     </a>
-    <div class="collapse mt-3" id="collapseExample">
+    <div class="collapse mt-3 d-lg-none" id="collapseExample">
 
         <div class="list-group">
-            <a href="{{ route('homepage') }}" class="list-group-item list-group-item-action">
+            <a href="{{ route('homepage') }}"
+                class="list-group-item list-group-item-action {{ request()->is('/') ? 'active' : '' }}">
                 Home
             </a>
-            <a href="{{ route('profile') }}" class="list-group-item list-group-item-action">Profile</a>
+            <a href="{{ route('profile') }}"
+                class="list-group-item list-group-item-action {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
             <a href="#" class="list-group-item list-group-item-action">Visi dan Misi</a>
             <a href="#" class="list-group-item list-group-item-action">Produk Kami</a>
             <a class="list-group-item list-group-item-action">Kontak</a>
@@ -60,7 +62,7 @@
 
 
 {{-- Sidebar Menu --}}
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasSidebar"
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasSideBar"
     aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title " id="offcanvasWithBothOptionsLabel">Menu</h5>
@@ -78,12 +80,12 @@
 
         </div>
         <div class="auth mt-3 px-3">
-            <a class="text-start w-100" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample">
+            <a class="text-start w-100" data-bs-toggle="collapse" data-bs-target="#collapseAuth" aria-expanded="false"
+                aria-controls="collapseExample">
                 <i class='bx bx-log-in'></i> Authentication
             </a>
 
-            <div class="collapse mt-3" id="collapseExample">
+            <div class="collapse mt-3" id="collapseAuth">
                 <a href="#" class="btn btn-success d-block">Sign in</a>
                 <a href="#" class="btn btn-outline-success d-block mt-2">Sign up</a>
             </div>
