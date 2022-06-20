@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ProductGalleryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 
 Route::get('/home', function () {
     return view('pages.home');
@@ -60,3 +64,8 @@ Route::get('/gallery', function () {
 Route::get('/testimoni', function () {
     return view('pages.testimoni');
 })->name('testimoni');
+
+Route::prefix('admin')->group(function () {
+    Route::resource('product', ProductController::class);
+    Route::resource('product-galleries', ProductGalleryController::class);
+});
