@@ -185,3 +185,34 @@ footer .row-copy i{
     transition: .3s ease-in-out;
     clip-path: circle(100% at 50% 50%);
 }
+
+
+/* TESTIMONI PAGE CSS */
+.testi .row-testi{
+    margin-top: 100px !important;
+}
+.testi .row-testi .card{
+    background-color: #6DCCB0;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+}
+
+.row-testi .card img{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row-testi .card .quote{
+    font-size: 60px;
+    color: #000000;
+    position: absolute;
+    top: -30px;
+    right: 50px;
+}
+.row-testi .card .rate i{
+    font-size: 30px;
+    color: rgb(255, 255, 24);
+}

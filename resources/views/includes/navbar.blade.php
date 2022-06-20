@@ -97,7 +97,9 @@
                 class="list-group-item list-group-item-action {{ request()->is('gallery') ? 'active' : '' }}"><i
                     class='bx bx-images'></i> Gallery
                 Foto</a>
-            <a class="list-group-item list-group-item-action "><i class='bx bx-chat'></i> Klien Kami</a>
+            <a href="{{ route('testimoni') }}"
+                class="list-group-item list-group-item-action {{ request()->is('testimoni') ? 'active' : '' }}"><i
+                    class='bx bx-chat'></i> Klien Kami</a>
 
         </div>
         <div class="auth mt-3 px-3">

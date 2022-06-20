@@ -48,3 +48,7 @@ Route::get('/event', function () {
 Route::get('/gallery', function () {
     return view('pages.gallery');
 })->name('gallery');
+
+Route::get('/testimoni', function () {
+    return view('pages.testimoni');
+})->name('testimoni');

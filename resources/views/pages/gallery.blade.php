@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="row row-gallery mt-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="img-box position-relative rounded-3 overflow-hidden">
                         <div class="bg-img">
                             Moto Plex
@@ -21,7 +21,7 @@
                         <img src="/images/pencapaian1.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 mt-3 mt-sm-0">
                     <div class="img-box position-relative rounded-3 overflow-hidden">
                         <div class="bg-img">
                             Moto Plex
@@ -29,7 +29,7 @@
                         <img src="/images/pencapaian1.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 mt-3 mt-lg-0">
                     <div class="img-box position-relative rounded-3 overflow-hidden">
                         <div class="bg-img">
                             Moto Plex
@@ -37,7 +37,7 @@
                         <img src="/images/pencapaian1.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-4 mt-3">
+                <div class="col-lg-4 col-md-6 mt-3">
                     <div class="img-box position-relative rounded-3 overflow-hidden">
                         <div class="bg-img">
                             Moto Plex
@@ -45,7 +45,7 @@
                         <img src="/images/pencapaian1.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-4 mt-3">
+                <div class="col-lg-4 col-md-6 mt-3">
                     <div class="img-box position-relative rounded-3 overflow-hidden">
                         <div class="bg-img">
                             Moto Plex
