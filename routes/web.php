@@ -45,6 +45,10 @@ Route::get('/artikel', function () {
     return view('pages.blog');
 })->name('artikel');
 
+Route::get('/artikel/detail', function () {
+    return view('pages.blog-detail');
+})->name('artikel-detail');
+
 Route::get('/event', function () {
     return view('pages.event');
 })->name('event');

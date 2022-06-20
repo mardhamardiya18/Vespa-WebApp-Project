@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <h5 class="card-title mt-3">Motor Klasik yang Semakin Nyentrik</h5>
-                            <a href="#" class=" d-inline-block mt-3">Lihat selengkapnya</a>
+                            <a href="{{ route('artikel-detail') }}" class=" d-inline-block mt-3">Lihat selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <h5 class="card-title mt-3">Deretan Selebriti Indonesia Penggemar Vespa</h5>
-                            <a href="#" class=" d-inline-block mt-3">Lihat selengkapnya</a>
+                            <a href="{{ route('artikel-detail') }}" class=" d-inline-block mt-3">Lihat selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                             <h5 class="card-title mt-3">Berkenalan dengan Vespa di Indonesia</h5>
-                            <a href="#" class=" d-inline-block mt-3">Lihat selengkapnya</a>
+                            <a href="{{ route('artikel-detail') }}" class=" d-inline-block mt-3">Lihat selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                                 </div>
                             </div>
                             <h5 class="card-title mt-3">Vespa Adalah Seni</h5>
-                            <a href="#" class=" d-inline-block mt-3">Lihat selengkapnya</a>
+                            <a href="{{ route('artikel-detail') }}" class=" d-inline-block mt-3">Lihat selengkapnya</a>
                         </div>
                     </div>
                 </div>

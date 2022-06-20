@@ -86,7 +86,7 @@
                     class='bx bx-book'></i>
                 Home</a>
             <a href="{{ route('artikel') }}"
-                class="list-group-item list-group-item-action {{ request()->is('artikel') ? 'active' : '' }}"><i
+                class="list-group-item list-group-item-action {{ request()->is('artikel*') ? 'active' : '' }}"><i
                     class='bx bx-book'></i>
                 Artikel</a>
             <a href="{{ route('event') }}"
