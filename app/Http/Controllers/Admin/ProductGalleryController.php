@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\DataTables;
@@ -58,7 +59,11 @@ class ProductGalleryController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::get();
+
+        return view('pages.admin.gallery.create', [
+            'products' => $products
+        ]);
     }
 
     /**
@@ -69,7 +74,15 @@ class ProductGalleryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = $request->all();
+
+        $item['photos'] = $request->file('photos')->store('product/photos', 'public');
+
+        Gallery::create($item);
+
+        toast('Gallery berhasil ditambahkan👍', 'success');
+
+        return redirect(route('product-galleries.index'));
     }
 
     /**
@@ -114,6 +127,14 @@ class ProductGalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produk = Gallery::findOrfail($id);
+
+        Storage::disk('public')->delete($produk->photos);
+
+        $produk->delete();
+
+        toast('Gallery berhasil dihapus👍', 'success');
+
+        return redirect(route('product-galleries.index'));
     }
 }

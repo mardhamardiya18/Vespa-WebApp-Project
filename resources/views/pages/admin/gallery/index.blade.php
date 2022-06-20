@@ -25,6 +25,7 @@
                                         <thead>
                                             <td>ID</td>
                                             <td>Nama Produk</td>
+                                            <td>Tipe</td>
                                             <td>Photo</td>
                                             <td>Aksi</td>
                                         </thead>
@@ -53,6 +54,10 @@
                 {
                     data: 'product.name',
                     name: 'product.name'
+                },
+                {
+                    data: 'product.seri',
+                    name: 'product.seri'
                 },
                 {
                     data: 'photos',

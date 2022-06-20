@@ -34,7 +34,7 @@
                                             <label for="products_id">Pilih Produk</label>
                                             <select name="products_id" class="form-control" id="">
                                                 @foreach ($products as $product)
-                                                    <option value="{{ $product->id }}">{{ $product->name }}</option>
+                                                    <option value="{{ $product->id }}">{{ $product->seri }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -44,7 +44,7 @@
                                                 class="form-control">
                                         </div>
                                         <div class="col-md-12 mb-2">
-                                            <img id="preview-image-thumbnail-upload" src="" alt="preview image"
+                                            <img id="preview-image-photos-upload" src="" alt="preview image"
                                                 style="max-height: 250px;">
                                         </div>
                                     </div>
@@ -52,7 +52,7 @@
                                         <div class="col text-right">
                                             <a href="{{ route('product-galleries.index') }}"
                                                 class="btn btn-danger">Kembali</a>
-                                            <button type="submit" class="btn btn-success">Save Product</button>
+                                            <button type="submit" class="btn btn-success">Save Gallery</button>
                                         </div>
                                     </div>
                                 </form>
