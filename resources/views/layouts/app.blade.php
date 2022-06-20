@@ -12,7 +12,7 @@
     {{-- Style --}}
     @stack('prepend-style')
     @include('includes.style')
-    @method('addon-style')
+    @stack('addon-style')
 </head>
 
 <body>
@@ -30,7 +30,7 @@
     {{-- Script --}}
     @stack('prepend-script')
     @include('includes.script')
-    @method('addon-script')
+    @stack('addon-script')
 </body>
 
 </html>

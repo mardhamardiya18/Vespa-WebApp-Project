@@ -29,6 +29,10 @@ Route::get('/home/product', function () {
     return view('pages.product');
 })->name('product');
 
+Route::get('/home/product/detail', function () {
+    return view('pages.product-detail');
+})->name('product-detail');
+
 Route::get('/home/contact', function () {
     return view('pages.contact');
 })->name('contact');

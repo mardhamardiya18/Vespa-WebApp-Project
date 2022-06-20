@@ -149,6 +149,29 @@ footer .row-copy i{
     color: #fff;
 }
 
+.product-detail{
+    margin-top: 150px;
+}
+
+.product-detail .thumbnail-image.active{
+    border: 2px solid #6DCCB0;
+}
+
+.product-detail .thumbnail-image{
+    max-width: 150px;
+}
+
+@media screen and (max-width: 500px) {
+    .product-detail .thumbnail-image{
+        max-width: 80px;
+    }
+}
+.product-detail .btn-pesan{
+    background-color: #6DCCB0;
+    color: #fff;
+    font-weight: 700;
+}
+
 
 /* CONTACT PAGE CSS */
 .contact .btn-contact{
