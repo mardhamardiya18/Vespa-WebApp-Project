@@ -40,3 +40,7 @@ Route::get('/about', function () {
 Route::get('/artikel', function () {
     return view('pages.blog');
 })->name('artikel');
+
+Route::get('/event', function () {
+    return view('pages.event');
+})->name('event');
