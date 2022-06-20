@@ -162,3 +162,26 @@ footer .row-copy i{
     font-size: 13px;
     margin: 0;
 }
+
+/* GALLERY PAGE CSS */
+.gallery .img-box .bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1d1d88;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    clip-path: circle(0% at 50% 50%);
+    transition: .3s ease-in-out;
+}
+
+.gallery .img-box:hover .bg-img{
+    transition: .3s ease-in-out;
+    clip-path: circle(100% at 50% 50%);
+}

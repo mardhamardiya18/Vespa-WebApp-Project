@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="row row-contact mt-5">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="card">
                         <img src="/images/blog1.png" class="img-fluid" alt="">
                         <div class="card-body">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 mt-3 mt-sm-0">
                     <div class="card">
                         <img src="/images/blog2.png" class="img-fluid" alt="">
                         <div class="card-body">
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
                     <div class="card">
                         <img src="/images/blog3.png" class="img-fluid" alt="">
                         <div class="card-body">
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
                     <div class="card">
                         <img src="/images/blog4.png" class="img-fluid" alt="">
                         <div class="card-body">

@@ -26,15 +26,15 @@
             <div class="menu-wrapper">
                 <a class="menu-link {{ request()->is('/') ? 'active' : '' }}"
                     href="{{ route('homepage') }}">Home</a>
-                <a class="menu-link {{ request()->is('profile') ? 'active' : '' }}"
+                <a class="menu-link {{ request()->is('home/profile') ? 'active' : '' }}"
                     href="{{ route('profile') }}">Profile</a>
-                <a class="menu-link {{ request()->is('visi-misi') ? 'active' : '' }}"
+                <a class="menu-link {{ request()->is('home/visi-misi') ? 'active' : '' }}"
                     href="{{ route('visimisi') }}">Visi dan Misi</a>
-                <a class="menu-link {{ request()->is('product') ? 'active' : '' }}"
+                <a class="menu-link {{ request()->is('home/product') ? 'active' : '' }}"
                     href="{{ route('product') }}">Produk Kami</a>
-                <a class="menu-link {{ request()->is('contact') ? 'active' : '' }}"
+                <a class="menu-link {{ request()->is('home/contact') ? 'active' : '' }}"
                     href="{{ route('contact') }}">Kontak</a>
-                <a class="menu-link {{ request()->is('about') ? 'active' : '' }}"
+                <a class="menu-link {{ request()->is('home/about') ? 'active' : '' }}"
                     href="{{ route('about') }}">About Us</a>
             </div>
         </div>
@@ -51,21 +51,21 @@
 
         <div class="list-group">
             <a href="{{ route('homepage') }}"
-                class="list-group-item list-group-item-action {{ request()->is('/') ? 'active' : '' }}">
+                class="list-group-item list-group-item-action {{ request()->is('home') ? 'active' : '' }}">
                 Home
             </a>
             <a href="{{ route('profile') }}"
-                class="list-group-item list-group-item-action {{ request()->is('profile') ? 'active' : '' }}">Profile</a>
+                class="list-group-item list-group-item-action {{ request()->is('home/profile') ? 'active' : '' }}">Profile</a>
             <a href="{{ route('visimisi') }}"
-                class="list-group-item list-group-item-action {{ request()->is('visi-misi') ? 'active' : '' }}">Visi
+                class="list-group-item list-group-item-action {{ request()->is('home/visi-misi') ? 'active' : '' }}">Visi
                 dan Misi</a>
             <a href="{{ route('product') }}"
-                class="list-group-item list-group-item-action {{ request()->is('product') ? 'active' : '' }}">Produk
+                class="list-group-item list-group-item-action {{ request()->is('home/product') ? 'active' : '' }}">Produk
                 Kami</a>
             <a href="{{ route('contact') }}"
-                class="list-group-item list-group-item-action {{ request()->is('contact') ? 'active' : '' }}">Kontak</a>
+                class="list-group-item list-group-item-action {{ request()->is('home/contact') ? 'active' : '' }}">Kontak</a>
             <a href="{{ route('about') }}"
-                class="list-group-item list-group-item-action {{ request()->is('about') ? 'active' : '' }}">About
+                class="list-group-item list-group-item-action {{ request()->is('home/about') ? 'active' : '' }}">About
                 Us</a>
         </div>
     </div>
@@ -82,7 +82,7 @@
     <div class="offcanvas-body p-0">
         <div class="list-group rounded-0">
             <a href="{{ route('homepage') }}"
-                class="list-group-item list-group-item-action {{ request()->is('/') ? 'active' : '' }}"><i
+                class="list-group-item list-group-item-action {{ request()->is('home*') ? 'active' : '' }}"><i
                     class='bx bx-book'></i>
                 Home</a>
             <a href="{{ route('artikel') }}"
@@ -93,7 +93,9 @@
                 class="list-group-item list-group-item-action {{ request()->is('event') ? 'active' : '' }}"><i
                     class='bx bx-calendar-event'></i> Event
                 Perusahaan</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class='bx bx-images'></i> Gallery
+            <a href="{{ route('gallery') }}"
+                class="list-group-item list-group-item-action {{ request()->is('gallery') ? 'active' : '' }}"><i
+                    class='bx bx-images'></i> Gallery
                 Foto</a>
             <a class="list-group-item list-group-item-action "><i class='bx bx-chat'></i> Klien Kami</a>
 
