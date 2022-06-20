@@ -34,7 +34,8 @@
                     href="{{ route('product') }}">Produk Kami</a>
                 <a class="menu-link {{ request()->is('contact') ? 'active' : '' }}"
                     href="{{ route('contact') }}">Kontak</a>
-                <a class="menu-link" href="#">About Us</a>
+                <a class="menu-link {{ request()->is('about') ? 'active' : '' }}"
+                    href="{{ route('about') }}">About Us</a>
             </div>
         </div>
     </div>
@@ -61,9 +62,11 @@
             <a href="{{ route('product') }}"
                 class="list-group-item list-group-item-action {{ request()->is('product') ? 'active' : '' }}">Produk
                 Kami</a>
-            <a href="{{ route('product') }}"
+            <a href="{{ route('contact') }}"
                 class="list-group-item list-group-item-action {{ request()->is('contact') ? 'active' : '' }}">Kontak</a>
-            <a class="list-group-item list-group-item-action">About Us</a>
+            <a href="{{ route('about') }}"
+                class="list-group-item list-group-item-action {{ request()->is('about') ? 'active' : '' }}">About
+                Us</a>
         </div>
     </div>
 </div>
@@ -78,10 +81,18 @@
     </div>
     <div class="offcanvas-body p-0">
         <div class="list-group rounded-0">
-            <a href="#" class="list-group-item list-group-item-action active"><i class='bx bx-book'></i>
+            <a href="{{ route('homepage') }}"
+                class="list-group-item list-group-item-action {{ request()->is('/') ? 'active' : '' }}"><i
+                    class='bx bx-book'></i>
+                Home</a>
+            <a href="{{ route('artikel') }}"
+                class="list-group-item list-group-item-action {{ request()->is('artikel') ? 'active' : '' }}"><i
+                    class='bx bx-book'></i>
                 Artikel</a>
-            <a href="#" class="list-group-item list-group-item-action"><i class='bx bx-calendar-event'></i> Event
-                Terdekat</a>
+            <a href="{{ route('event') }}"
+                class="list-group-item list-group-item-action {{ request()->is('event') ? 'active' : '' }}"><i
+                    class='bx bx-calendar-event'></i> Event
+                Perusahaan</a>
             <a href="#" class="list-group-item list-group-item-action"><i class='bx bx-images'></i> Gallery
                 Foto</a>
             <a class="list-group-item list-group-item-action "><i class='bx bx-chat'></i> Klien Kami</a>

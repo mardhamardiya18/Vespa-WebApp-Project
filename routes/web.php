@@ -32,3 +32,11 @@ Route::get('/product', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::get('/artikel', function () {
+    return view('pages.blog');
+})->name('artikel');

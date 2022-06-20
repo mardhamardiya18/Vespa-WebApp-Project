@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="row row-product mt-5">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-6">
                     <div class="card">
                         <img src="/images/giorni.png" alt="">
                         <div class="card-body text-center">
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-6">
                     <div class="card">
                         <img src="/images/gtssport.png" alt="">
                         <div class="card-body text-center">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-6 mt-3 mt-lg-0">
                     <div class="card">
                         <img src="/images/gtstech.png" alt="">
                         <div class="card-body text-center">
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-6  mt-3 mt-lg-0">
                     <div class="card">
                         <img src="/images/spirintS.png" alt="">
                         <div class="card-body text-center">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mt-3">
+                <div class="col-lg-3 col-6 mt-3">
                     <div class="card">
                         <img src="/images/sprint.png" alt="">
                         <div class="card-body text-center">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mt-3">
+                <div class="col-lg-3 col-6 mt-3">
                     <div class="card">
                         <img src="/images/S.png" alt="">
                         <div class="card-body text-center">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mt-3">
+                <div class="col-lg-3 col-6 mt-3">
                     <div class="card">
                         <img src="/images/LX.png" alt="">
                         <div class="card-body text-center">
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mt-3">
+                <div class="col-lg-3 col-6 mt-3">
                     <div class="card">
                         <img src="/images/primavera.png" alt="">
                         <div class="card-body text-center">
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 mt-3">
+                <div class="col-lg-3 col-6 mt-3">
                     <div class="card">
                         <img src="/images/primaveraS.png" alt="">
                         <div class="card-body text-center">

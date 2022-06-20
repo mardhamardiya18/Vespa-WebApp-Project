@@ -29,7 +29,7 @@
                             <input type="text" name="phone" id="phone" class="form-control" required>
                         </div>
                         <div class="form-group mt-3">
-                            <label for="message">No Telepon</label>
+                            <label for="message">Message</label>
                             <textarea name="message" id="message" class="form-control" cols="30" rows="10"></textarea>
                         </div>
                         <button type="submit" class="btn btn-contact mt-5 w-100 py-3">Send Message</button>

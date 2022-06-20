@@ -155,3 +155,10 @@ footer .row-copy i{
     background-color: #6DCCB0;
     color: #fff;
 }
+
+
+/* ARTIKEL PAGE CSS */
+.artikel .author p, .artikel .create p{
+    font-size: 13px;
+    margin: 0;
+}
