@@ -13,13 +13,18 @@ class Specification extends Model
         'products_id',
         'engine',
         'displacement',
-        'max-power',
-        'max-torque',
-        'cooling-system',
+        'maxPower',
+        'maxTorque',
+        'coolingSystem',
         'transmission',
-        'brake-system',
-        'front-tire',
-        'rear-tire',
-        'fuel-capacity'
+        'brakeSystem',
+        'frontTire',
+        'rearTire',
+        'fuelCapacity'
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'products_id', 'id');
+    }
 }

@@ -33,8 +33,8 @@
         <section class="store-detail mt-5 mt-lg-0">
             <div class="container">
                 <div class="row">
-                    <h2 class="product-name">VESPA LX 125 I-GET</h2>
-                    <h4 class="product-price">Rp 40.000.000</h4>
+                    <h2 class="product-name">{{ $product->name }}</h2>
+                    <h4 class="product-price">Rp {{ number_format($product->price) }}</h4>
                 </div>
 
                 <div class="row mt-5">
@@ -48,23 +48,23 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Engine :</th>
-                                    <th scope="col">one</th>
+                                    <th scope="col">{{ $product->specification->engine }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Displacement :</th>
-                                    <th scope="col">three</th>
+                                    <th scope="col">{{ $product->specification->displacement }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Max. Power :</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">{{ $product->specification->maxPower }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Max. Torque :</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">{{ $product->specification->maxTorque }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Cooling System :</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">{{ $product->specification->coolingSystem }}</th>
                                 </tr>
 
                             </thead>
@@ -75,23 +75,23 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Front Tire :</th>
-                                    <th scope="col">one</th>
+                                    <th scope="col">{{ $product->specification->frontTire }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Rear Tire :</th>
-                                    <th scope="col">three</th>
+                                    <th scope="col">{{ $product->specification->rearTire }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Fuel Capacity :</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">{{ $product->specification->fuelCapacity }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Transmission :</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">{{ $product->specification->transmission }}</th>
                                 </tr>
                                 <tr>
                                     <th scope="col">Break System :</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">{{ $product->specification->brakeSystem }}</th>
                                 </tr>
                             </thead>
                         </table>
@@ -112,22 +112,13 @@
             },
             data: {
                 activePhoto: 0,
-                photos: [{
-                        id: 1,
-                        url: "/images/LX.png",
-                    },
-                    {
-                        id: 2,
-                        url: "/images/LX2.png",
-                    },
-                    {
-                        id: 3,
-                        url: "/images/LX3.png",
-                    },
-                    {
-                        id: 4,
-                        url: "/images/LX4.png",
-                    },
+                photos: [
+                    @foreach ($product->gallery as $gallery)
+                        {
+                            id: {{ $gallery->id }},
+                            url: "{{ Storage::url($gallery->photos) }}",
+                        },
+                    @endforeach
 
                 ],
             },

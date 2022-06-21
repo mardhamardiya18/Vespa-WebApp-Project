@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Specification;
 use Illuminate\Http\Request;
+use Symfony\Component\CssSelector\Node\Specificity;
 use Yajra\DataTables\DataTables;
 
 class ProductController extends Controller
@@ -70,7 +72,21 @@ class ProductController extends Controller
     {
         $data = $request->all();
 
-        Product::create($data);
+        $product = Product::create($data);
+
+        Specification::create([
+            'products_id' => $product->id,
+            'engine' => $request->engine,
+            'displacement' => $request->displacement,
+            'maxPower' => $request->maxPower,
+            'maxTorque' => $request->maxTorque,
+            'coolingSystem' => $request->coolingSystem,
+            'transmission' => $request->transmission,
+            'brakeSystem' => $request->brakeSystem,
+            'frontTire' => $request->frontTire,
+            'rearTire' => $request->rearTire,
+            'fuelCapacity' => $request->fuelCapacity,
+        ]);
 
         toast('Produk ' . $request->seri . ' berhasil ditambahkan👍', 'success');
 
@@ -97,9 +113,11 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
+        $spek = Specification::where('products_id', $id)->first();
 
         return view('pages.admin.produk.edit', [
             'product' => $product,
+            'spek' => $spek,
         ]);
     }
 
@@ -115,8 +133,11 @@ class ProductController extends Controller
         $data = $request->all();
 
         $product = Product::findOrFail($id);
+        $spek = Specification::where('products_id', $id)->first();
+
 
         $product->update($data);
+        $spek->update($data);
 
         toast('Produk ' . $request->seri . ' berhasil diupdate👍', 'success');
 

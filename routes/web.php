@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductGalleryController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,13 +30,9 @@ Route::get('/home/visi-misi', function () {
     return view('pages.visimisi');
 })->name('visimisi');
 
-Route::get('/home/product', function () {
-    return view('pages.product');
-})->name('product');
+Route::get('/home/product', [HomeController::class, 'product'])->name('product');
 
-Route::get('/home/product/detail', function () {
-    return view('pages.product-detail');
-})->name('product-detail');
+Route::get('/home/product/{id}', [HomeController::class, 'productDetail'])->name('product-detail');
 
 Route::get('/home/contact', function () {
     return view('pages.contact');

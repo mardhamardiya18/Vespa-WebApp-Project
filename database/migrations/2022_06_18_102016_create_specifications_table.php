@@ -18,14 +18,14 @@ class CreateSpecificationsTable extends Migration
             $table->integer('products_id');
             $table->string('engine');
             $table->string('displacement');
-            $table->string('max-power');
-            $table->string('max-torque');
-            $table->string('cooling-system');
+            $table->string('maxPower');
+            $table->string('maxTorque');
+            $table->string('coolingSystem');
             $table->string('transmission');
-            $table->string('brake-system');
-            $table->string('front-tire');
-            $table->string('rear-tire');
-            $table->string('fuel-capacity');
+            $table->string('brakeSystem');
+            $table->string('frontTire');
+            $table->string('rearTire');
+            $table->string('fuelCapacity');
 
             $table->timestamps();
         });
