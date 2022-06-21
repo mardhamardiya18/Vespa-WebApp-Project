@@ -170,7 +170,7 @@
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                 @if (Auth::user()->avatar)
-                    <img src="{{ Auth::user()->avatar }}" width="40"
+                    <img src="{{ Storage::url(Auth::user()->avatar) }}" width="40"
                         class=" rounded-circle ms-3 dropdown-toggle" alt="" id="dropdownProfile"
                         data-bs-toggle="dropdown" aria-expanded="false">
                 @else

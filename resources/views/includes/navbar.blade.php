@@ -25,7 +25,7 @@
         </div>
         <div class="col-8 text-center">
             <div class="menu-wrapper">
-                <a class="menu-link {{ request()->is('/') ? 'active' : '' }}"
+                <a class="menu-link {{ request()->is('home') ? 'active' : '' }}"
                     href="{{ route('homepage') }}">Home</a>
                 <a class="menu-link {{ request()->is('home/profile') ? 'active' : '' }}"
                     href="{{ route('profile') }}">Profile</a>
@@ -45,8 +45,9 @@
             @auth
                 <div class="dropdown">
                     @if (Auth::user()->avatar)
-                        <img src="{{ Auth::user()->avatar }}" width="40" class=" rounded-circle ms-3 dropdown-toggle"
-                            alt="" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{{ Storage::url(Auth::user()->avatar) }}" width="40"
+                            class=" rounded-circle ms-3 dropdown-toggle" alt="" id="dropdownProfile"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                     @else
                         <img src="{{ Auth::user()->gravatar() }}" width="40"
                             class=" rounded-circle ms-3 dropdown-toggle" alt="" id="dropdownProfile"
@@ -59,7 +60,7 @@
                                     dashboard</a></li>
                         @endif
 
-                        <li><a class="dropdown-item" href="#">Setting akun</a></li>
+                        <li><a class="dropdown-item" href="{{ route('account-setting') }}">Setting akun</a></li>
                         <li>
                             <form action="/logout" method="POST">
                                 @csrf

@@ -11,6 +11,8 @@ use App\Http\Controllers\ArticelController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController as HomeEventController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeUserController;
+use App\Http\Controllers\TestiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,9 +63,15 @@ Route::get('/gallery', function () {
     return view('pages.gallery');
 })->name('gallery');
 
-Route::get('/testimoni', function () {
-    return view('pages.testimoni');
-})->name('testimoni');
+Route::get('/testimoni', [TestiController::class, 'index'])->name('testimoni');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/testimoni/create', [TestiController::class, 'create'])->name('testimoniCreate');
+    Route::post('/testimoni/store', [TestiController::class, 'store'])->name('testimoniStore');
+
+    Route::get('/userSetting', [HomeUserController::class, 'edit'])->name('account-setting');
+    Route::put('/userSetting/update/{id}', [HomeUserController::class, 'update'])->name('account-store');
+});
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::resource('product', ProductController::class);

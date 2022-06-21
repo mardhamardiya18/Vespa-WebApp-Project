@@ -12,83 +12,66 @@
                     <h1>Testimonial With Customer Success😃</h1>
                 </div>
             </div>
-            <div class="row row-testi mt-5">
-                <div class="col-md-6">
-                    <div class="card">
-                        <img src="/images/testi1.png" width="80" class="img-fluid rounded-circle" alt="">
-                        <i class='bx bxs-quote-right quote'></i>
-                        <div class="card-body p-5 text-center mt-3">
-                            <h5 class="card-title">Dewi Anggraini</h5>
-                            <p class="m-0">Pembeli <a href="#" class="badge text-bg-warning">Vespa Sprint</a> </p>
-                            <div class="rate mt-3">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
+            <div class="row row-testi">
+
+                @foreach ($testies as $testi)
+                    <div class="col-md-6 mt-5">
+                        <div class="card">
+                            @if ($testi->user->avatar)
+                                <img src="{{ Storage::url($testi->user->avatar) }}" width="70"
+                                    class=" rounded-circle ms-3 dropdown-toggle" alt="" id="dropdownProfile"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                            @else
+                                <img src="{{ App\Models\User::gravatar() }}" width="70"
+                                    class=" rounded-circle ms-3 dropdown-toggle" alt="" id="dropdownProfile"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                            @endif
+                            <i class='bx bxs-quote-right quote'></i>
+                            <div class="card-body p-5 text-center mt-3">
+                                <h5 class="card-title">{{ $testi->user->name }}</h5>
+                                <p class="m-0">Pembeli <a href="#"
+                                        class="badge text-bg-warning">{{ $testi->product->name }} -
+                                        {{ $testi->product->seri }}</a>
+                                </p>
+                                <div class="rate mt-4">
+                                    @if ($testi->rate == 'tidak puas')
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                    @elseif ($testi->rate == 'kurang puas')
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                    @elseif ($testi->rate == 'puas')
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                    @elseif ($testi->rate == 'puas banget')
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bx-star bx-sm"></i>
+                                    @elseif ($testi->rate == 'sangat puas banget')
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                        <i class="bx bxs-star bx-sm"></i>
+                                    @endif
+
+                                </div>
+                                <p class="content mt-3">{{ $testi->content }}</p>
                             </div>
-                            <p class="content mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quidem quae
-                                animi odit quos explicabo eaque sint nemo quod autem.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 mt-5 mt-sm-0">
-                    <div class="card">
-                        <img src="/images/testi1.png" width="80" class="img-fluid rounded-circle" alt="">
-                        <i class='bx bxs-quote-right quote'></i>
-                        <div class="card-body p-5 text-center mt-3">
-                            <h5 class="card-title">Dewi Anggraini</h5>
-                            <p class="m-0">Pembeli <a href="#" class="badge text-bg-warning">Vespa Sprint</a> </p>
-                            <div class="rate mt-3">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <p class="content mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quidem quae
-                                animi odit quos explicabo eaque sint nemo quod autem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-5">
-                    <div class="card">
-                        <img src="/images/testi3.png" width="80" class="img-fluid rounded-circle" alt="">
-                        <i class='bx bxs-quote-right quote'></i>
-                        <div class="card-body p-5 text-center mt-3">
-                            <h5 class="card-title">Dewi Anggraini</h5>
-                            <p class="m-0">Pembeli <a href="#" class="badge text-bg-warning">Vespa Sprint</a> </p>
-                            <div class="rate mt-3">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <p class="content mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quidem quae
-                                animi odit quos explicabo eaque sint nemo quod autem.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-5">
-                    <div class="card">
-                        <img src="/images/testi2.png" width="80" class="img-fluid rounded-circle" alt="">
-                        <i class='bx bxs-quote-right quote'></i>
-                        <div class="card-body p-5 text-center mt-3">
-                            <h5 class="card-title">Dewi Anggraini</h5>
-                            <p class="m-0">Pembeli <a href="#" class="badge text-bg-warning">Vespa Sprint</a> </p>
-                            <div class="rate mt-3">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                            <p class="content mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quidem quae
-                                animi odit quos explicabo eaque sint nemo quod autem.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
