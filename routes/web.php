@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductGalleryController;
+use App\Http\Controllers\ArticelController;
+use App\Http\Controllers\EventController as HomeEventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,17 +47,11 @@ Route::get('/home/about', function () {
     return view('pages.about');
 })->name('about');
 
-Route::get('/artikel', function () {
-    return view('pages.blog');
-})->name('artikel');
+Route::get('/artikel', [ArticelController::class, 'index'])->name('artikel');
 
-Route::get('/artikel/detail', function () {
-    return view('pages.blog-detail');
-})->name('artikel-detail');
+Route::get('/artikel/{slug}', [ArticelController::class, 'detail'])->name('artikel-detail');
 
-Route::get('/event', function () {
-    return view('pages.event');
-})->name('event');
+Route::get('/event', [HomeEventController::class, 'index'])->name('event');
 
 Route::get('/gallery', function () {
     return view('pages.gallery');
@@ -65,4 +64,7 @@ Route::get('/testimoni', function () {
 Route::prefix('admin')->group(function () {
     Route::resource('product', ProductController::class);
     Route::resource('product-galleries', ProductGalleryController::class);
+    Route::resource('artikel', PostController::class);
+    Route::resource('kategori', CategoryController::class);
+    Route::resource('event', EventController::class);
 });

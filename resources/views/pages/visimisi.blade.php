@@ -15,6 +15,11 @@
             <div class="row row-visi mt-5">
                 <div class="col-12">
                     <h4>Visi:</h4>
+                    <p>Tidak ditemukan</p>
+                </div>
+                <div class="col-12">
+                    <h4>Misi:</h4>
+                    <p>Tidak ditemukan</p>
                 </div>
             </div>
         </div>

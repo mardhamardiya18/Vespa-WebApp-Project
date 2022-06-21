@@ -33,7 +33,7 @@
         <section class="store-detail mt-5 mt-lg-0">
             <div class="container">
                 <div class="row">
-                    <h2 class="product-name">{{ $product->name }}</h2>
+                    <h2 class="product-name">{{ $product->name }} - {{ $product->seri }}</h2>
                     <h4 class="product-price">Rp {{ number_format($product->price) }}</h4>
                 </div>
 

@@ -10,6 +10,7 @@
         <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto">
                 <a class="company" href="#">PT PIAGGIO INDONESIA</a>
+
             </div>
         </div>
     </div>
@@ -22,7 +23,7 @@
             <i class='bx bxs-grid-alt bx-md toggle-sidebar' type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasSideBar" aria-controls="offcanvasWithBothOptions"></i>
         </div>
-        <div class="col-10 text-center">
+        <div class="col-8 text-center">
             <div class="menu-wrapper">
                 <a class="menu-link {{ request()->is('/') ? 'active' : '' }}"
                     href="{{ route('homepage') }}">Home</a>
@@ -36,7 +37,39 @@
                     href="{{ route('contact') }}">Kontak</a>
                 <a class="menu-link {{ request()->is('home/about') ? 'active' : '' }}"
                     href="{{ route('about') }}">About Us</a>
+
+
             </div>
+        </div>
+        <div class="col-2">
+            @auth
+                <div class="dropdown">
+                    @if (Auth::user()->avatar)
+                        <img src="{{ Auth::user()->avatar }}" width="40" class=" rounded-circle ms-3 dropdown-toggle"
+                            alt="" id="dropdownProfile" data-bs-toggle="dropdown" aria-expanded="false">
+                    @else
+                        <img src="{{ Auth::user()->gravatar() }}" width="40"
+                            class=" rounded-circle ms-3 dropdown-toggle" alt="" id="dropdownProfile"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                    @endif
+
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownProfile">
+                        @if (Auth::user()->roles == 'ADMIN')
+                            <li><a class="dropdown-item active" href="{{ route('product.index') }}">Go to admin
+                                    dashboard</a></li>
+                        @endif
+
+                        <li><a class="dropdown-item" href="#">Setting akun</a></li>
+                        <li>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item text-sm">Logout</button>
+                            </form>
+
+                        </li>
+                    </ul>
+                </div>
+            @endauth
         </div>
     </div>
 </div>
@@ -103,14 +136,14 @@
 
         </div>
         <div class="auth mt-3 px-3">
-            <a class="text-start w-100" data-bs-toggle="collapse" data-bs-target="#collapseAuth" aria-expanded="false"
-                aria-controls="collapseExample">
+            <a class="text-start w-100" data-bs-toggle="collapse" data-bs-target="#collapseAuth"
+                aria-expanded="false" aria-controls="collapseExample">
                 <i class='bx bx-log-in'></i> Authentication
             </a>
 
             <div class="collapse mt-3" id="collapseAuth">
-                <a href="#" class="btn btn-success d-block">Sign in</a>
-                <a href="#" class="btn btn-outline-success d-block mt-2">Sign up</a>
+                <a href="{{ route('login') }}" class="btn btn-success d-block">Sign in</a>
+                <a href="{{ route('register') }}" class="btn btn-outline-success d-block mt-2">Sign up</a>
             </div>
         </div>
 

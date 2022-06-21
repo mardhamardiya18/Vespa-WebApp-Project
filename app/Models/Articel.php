@@ -16,6 +16,7 @@ class Articel extends Model
         'slug',
         'content',
         'photos',
+        'thumbnail'
     ];
 
     public function user()
