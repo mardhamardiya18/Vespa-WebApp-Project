@@ -27,6 +27,16 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Kelola Event</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('message.index') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Kelola Pesan</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.index') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Kelola User</span></a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">

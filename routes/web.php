@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductGalleryController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ArticelController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventController as HomeEventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +24,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::get('/', function () {
+    return view('pages.cover');
+})->name('cover');
 
 Route::get('/home', function () {
     return view('pages.home');
@@ -39,9 +44,8 @@ Route::get('/home/product', [HomeController::class, 'product'])->name('product')
 
 Route::get('/home/product/{id}', [HomeController::class, 'productDetail'])->name('product-detail');
 
-Route::get('/home/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/home/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/home/contact/send', [ContactController::class, 'send'])->name('contact-send');
 
 Route::get('/home/about', function () {
     return view('pages.about');
@@ -61,10 +65,12 @@ Route::get('/testimoni', function () {
     return view('pages.testimoni');
 })->name('testimoni');
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::resource('product', ProductController::class);
     Route::resource('product-galleries', ProductGalleryController::class);
     Route::resource('artikel', PostController::class);
     Route::resource('kategori', CategoryController::class);
     Route::resource('event', EventController::class);
+    Route::resource('message', MessageController::class);
+    Route::resource('user', UserController::class);
 });

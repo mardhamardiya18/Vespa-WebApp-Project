@@ -15,7 +15,9 @@
             </div>
             <div class="row row-contact mt-5">
                 <div class="col-12">
-                    <form action="#">
+                    <form action="{{ route('contact-send') }}" method="POST" enctype="multipart/form-data">
+                        @method('POST')
+                        @csrf
                         <div class="form-group">
                             <label for="name">Nama Lengkap</label>
                             <input type="text" name="name" id="name" class="form-control" required>
